@@ -9,6 +9,12 @@ public class Contato {
         setNumero(numero);
     }
 
+    @Override
+    public String toString() {
+        String informacao = String.format("Nome: %s\t Numero: %s", this.nome, this.numero);
+        return informacao;
+    }
+
     public String getNome() {
         return nome;
     }
