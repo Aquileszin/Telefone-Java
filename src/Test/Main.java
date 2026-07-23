@@ -18,7 +18,7 @@ public class Main {
         System.out.println("Contatos Filtrados:");
         System.out.println(telefone.buscar("CAR"));
 
-        Chamada ligacao = new Chamada("84 9182-8273", "72 9823-2852");
+        Ligacao ligacao = new Ligacao("84 9182-8273", "72 9823-2852");
         ligacao.ligar();
         System.out.println(ligacao);
     }

@@ -3,14 +3,19 @@ package Telefone;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Chamada {
+public class Ligacao {
     private String numeroOrigem;
     private String numeroDestino;
     private String horario;
 
-    public Chamada(String numeroOrigem, String numeroDestino) {
+    public Ligacao(String numeroOrigem, String numeroDestino) {
         setNumeroOrigem(numeroOrigem);
         setNumeroDestino(numeroDestino);
+    }
+
+    public Ligacao(Contato contatoOrigem, Contato contatoDestino) {
+        this.numeroOrigem = contatoOrigem.getNumero();
+        this.numeroDestino = contatoDestino.getNumero();
     }
 
     public void ligar() {
@@ -24,11 +29,11 @@ public class Chamada {
 
     @Override
     public String toString() {
-        String historicoChamada = String.format("Origem: %s\t Destino: %s\t Horário: %s",
+        String historico = String.format("Origem: %s\t Destino: %s\t Horário: %s",
                 this.numeroOrigem,
                 this.numeroDestino,
                 this.horario);
-        return historicoChamada;
+        return historico;
     }
 
     public String getNumeroOrigem() {

@@ -3,10 +3,12 @@ package Telefone;
 public class Telefone {
     private String numeroChip;
     private Contatos contatos;
+    private Chamadas chamadas;
 
     public Telefone(String numeroChip) {
         this.numeroChip = numeroChip;
         contatos = new Contatos();
+        chamadas = new Chamadas();
     }
 
     public void adicionarContato(Contato contato) {
@@ -23,5 +25,9 @@ public class Telefone {
 
     public Contatos getContatos() {
         return contatos;
+    }
+
+    public Chamadas getChamadas() {
+        return chamadas;
     }
 }
