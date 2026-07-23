@@ -9,6 +9,10 @@ public class Telefone {
         contatos = new Contatos();
     }
 
+    public void adicionarContato(Contato contato) {
+        contatos.adicionar(contato);
+    }
+
     public String getNumeroChip() {
         return numeroChip;
     }
