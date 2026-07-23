@@ -15,8 +15,10 @@ public class Contatos {
 
     public Contatos buscar(String buscarNome) {
         Contatos filtro = new Contatos();
+        String buscarNomeMinusculo = buscarNome.toLowerCase();
         for (Contato contato : contatos) {
-            if (contato.getNome().startsWith(buscarNome)) {
+            String nomeContatoMinusculo = contato.getNome().toLowerCase();
+            if (nomeContatoMinusculo.startsWith(buscarNomeMinusculo)) {
                 filtro.adicionar(contato);
             }
         }
@@ -31,6 +33,7 @@ public class Contatos {
         }
         return listaDeContatos;
     }
+
 
     public ArrayList<Contato> getContatos() {
         return contatos;
