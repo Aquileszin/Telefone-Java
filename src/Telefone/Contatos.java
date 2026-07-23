@@ -13,6 +13,15 @@ public class Contatos {
         this.contatos.add(contato);
     }
 
+    @Override
+    public String toString() {
+        String listaDeContatos = "Contatos:\n";
+        for (Contato contato : this.contatos) {
+            listaDeContatos += contato + "\n";
+        }
+        return listaDeContatos;
+    }
+
     public ArrayList<Contato> getContatos() {
         return contatos;
     }
