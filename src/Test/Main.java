@@ -13,6 +13,8 @@ public class Main {
         telefone.adicionarContato(contatoA);
         telefone.adicionarContato(contatoB);
         telefone.adicionarContato(contatoC);
-        System.out.println(telefone.getContatos());
+
+
+        System.out.println(telefone.buscar("po"));
     }
 }

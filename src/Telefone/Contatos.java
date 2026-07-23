@@ -13,6 +13,16 @@ public class Contatos {
         this.contatos.add(contato);
     }
 
+    public Contatos buscar(String buscarNome) {
+        Contatos filtro = new Contatos();
+        for (Contato contato : contatos) {
+            if (contato.getNome().startsWith(buscarNome)) {
+                filtro.adicionar(contato);
+            }
+        }
+        return filtro;
+    }
+
     @Override
     public String toString() {
         String listaDeContatos = "Contatos:\n";

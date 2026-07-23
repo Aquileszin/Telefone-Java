@@ -13,6 +13,10 @@ public class Telefone {
         contatos.adicionar(contato);
     }
 
+    public Contatos buscar(String nome) {
+        return contatos.buscar(nome);
+    }
+
     public String getNumeroChip() {
         return numeroChip;
     }
