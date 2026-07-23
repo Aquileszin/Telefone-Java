@@ -16,10 +16,19 @@ public class Chamada {
     public void ligar() {
         System.out.println("Ligando para " + getNumeroDestino());
         System.out.println("Chamando...");
-        System.out.println("Número ocupado\tTente novamente mais tarde.");
+        System.out.println("Número ocupado.\tTente novamente mais tarde.");
         DateTimeFormatter formatadorData = DateTimeFormatter.ofPattern("dd/MM/yyyy HH/mm/ss");
         LocalDateTime horarioAgora = LocalDateTime.now();
         this.horario = formatadorData.format(horarioAgora);
+    }
+
+    @Override
+    public String toString() {
+        String historicoChamada = String.format("Origem: %s\t Destino: %s\t Horário: %s",
+                this.numeroOrigem,
+                this.numeroDestino,
+                this.horario);
+        return historicoChamada;
     }
 
     public String getNumeroOrigem() {

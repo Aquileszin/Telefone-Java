@@ -13,6 +13,10 @@ public class Main {
         telefone.adicionarContato(contatoA);
         telefone.adicionarContato(contatoB);
         telefone.adicionarContato(contatoC);
+        System.out.println(telefone.getContatos());
+
+        System.out.println("Contatos Filtrados:");
+        System.out.println(telefone.buscar("CAR"));
 
         Chamada ligacao = new Chamada("84 9182-8273", "72 9823-2852");
         ligacao.ligar();
