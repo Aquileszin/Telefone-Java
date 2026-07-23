@@ -9,6 +9,10 @@ public class Contatos {
         contatos = new ArrayList<Contato>();
     }
 
+    public void adicionar(Contato contato) {
+        this.contatos.add(contato);
+    }
+
     public ArrayList<Contato> getContatos() {
         return contatos;
     }
