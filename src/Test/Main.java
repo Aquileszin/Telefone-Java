@@ -15,6 +15,6 @@ public class Main {
         telefone.adicionarContato(contatoC);
 
 
-        System.out.println(telefone.buscar("C"));
+        System.out.println(telefone.buscar("CAR"));
     }
 }
